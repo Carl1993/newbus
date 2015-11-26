@@ -18,6 +18,9 @@
 				<td><a href="http://0.0.0.0:3000/" style="color:white;">出行路线查询</a></td>
 				<td><a href="http://0.0.0.0:3000/home/index2/" style="color:white;">公交线路信息</a></td>
 				<td><a href="http://0.0.0.0:3000/home/index3/" style="color:white;">反馈</a></td>
+				<% if current_user%>
+				<td><a href="http://0.0.0.0:3000/home/index4/" style="color:white;">公告发布</a></td>
+				<% end %>
 			</tr>
 			</table>
 		</div>
@@ -37,7 +40,7 @@
 		</div>
 	</div>
 	<div id="notification" style="width:100%; height:20px; background:yellow; color:red; float:left;">
-		公告：XXX线路修改
+		<marquee>公告：XXX线路修改</marquee>
 	</div>
 	
 	<div id="bus-result" style="width:100%; float:left;">

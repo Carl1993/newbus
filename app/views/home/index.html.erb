@@ -8,6 +8,7 @@
 	</style>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MovUTD0XDPU7vNNqHFsItNYr"></script>
 	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	
 	<title>根据起终点名称查询公交换乘</title>
 </head>
 <body>
@@ -19,6 +20,9 @@
 				<td><a href="http://0.0.0.0:3000/" style="color:white;">出行路线查询</a></td>
 				<td><a href="http://0.0.0.0:3000/home/index2/" style="color:white;">公交线路信息</a></td>
 				<td><a href="http://0.0.0.0:3000/home/index3/" style="color:white;">反馈</a></td>
+				<% if current_user%>
+				<td><a href="http://0.0.0.0:3000/home/index4/" style="color:white;">公告发布</a></td>
+				<% end %>
 			</tr>
 			</table>
 		</div>
@@ -32,7 +36,7 @@
     <% else %>
       <%= link_to('注册', new_registration_path(:user)) %> |
       <%= link_to('登录', new_session_path(:user)) %>
-    <% end %>
+    <% end %><span></span>
 			</tr>
 			</table>
 		</div>

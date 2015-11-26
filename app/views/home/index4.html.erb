@@ -7,7 +7,7 @@
 		#l-map{height:500px;width:100%;}
 	</style>
 	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=MovUTD0XDPU7vNNqHFsItNYr"></script>
-	<title>反馈</title>
+	<title>公告发布</title>
 </head>
 <body>
 	<div id="header" style="width:100%; height:50px; background:blue; color:white; line-height:50px; text-indent:25px;">
@@ -43,19 +43,22 @@
 		<marquee>公告：XXX线路修改</marquee>
 	</div>
 
-	<div class="ds-thread" data-thread-key="http://0.0.0.0:3000/home/index3/" data-title="反馈" data-url="http://0.0.0.0:3000/home/index3/"></div>
+	<div id="comment" style="width:50%; float :left;">
+    	<form method="post">
+	<input type="hidden" name="thread_id" value="6220978366875435777">
+	<input type="hidden" name="parent_id" value="">
+	<input type="hidden" name="nonce" value="55fe76ff0aa4c">
 
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"ibus"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-   
+<div class="ds-textarea-wrapper ds-rounded-top">
+	<td>公告内容:</td>
+	<textarea name="message" title="" placeholder="写点内容吧…"></textarea>
+	<pre class="ds-hidden-text"></pre>
+</div>
+
+<div class="button">
+	<button class="ds-post-button" type="submit">发布</button>
+	<button type="reset">重置</button>
+</div>
+    </div>
 </body>
 </html>

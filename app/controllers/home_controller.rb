@@ -7,5 +7,6 @@ class HomeController < ApplicationController
   end
   def index3
   end
-  	
+  def index4
+  end
 end
